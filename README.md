@@ -4,6 +4,7 @@
 
 
 // Base class Shape
+
 class Shape {
 public:
     virtual double calculateArea() const = 0;  // Pure virtual function for abstraction
@@ -11,6 +12,7 @@ public:
 };
 
 // Derived class Circle
+
 class Circle : public Shape {
 private:
     double radius;
@@ -28,6 +30,7 @@ public:
 };
 
 // Derived class Rectangle
+
 class Rectangle : public Shape {
 private:
     double width;
@@ -47,10 +50,12 @@ public:
 
 int main() {
     // Creating objects
+    
     Circle circle(5.0);
     Rectangle rectangle(4.0, 6.0);
 
     // Polymorphism: Using a common interface for different objects
+    
     std::vector<Shape*> shapes = {&circle, &rectangle};
 
     for (const Shape* shape : shapes) {
